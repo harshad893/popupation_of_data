@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Displaying info of webpage</h1>
+        {% if webpages %}
+            <table border="1px">
+                <tr><th>topic_name</th>
+                    <th>Name</th>
+                    <th>URL</th>
+                </tr>
+
+                {% for i in webpages %}
+                <tr>
+                    <td>{{i.topic_name}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.url}}</td>
+                </tr>
+
+                {% endfor %}
+
+            </table>
+        {% else %}
+        <h1>No data in Webapge Model</h1>
+        {% endif %}
+    </center>
+</body>
+</html>
