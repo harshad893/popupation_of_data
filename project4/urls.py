@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('display_topic/',views.display_topic,name='display_topic'),
     path('display_webpage/',views.display_webpage,name='display_webpage'),
+    path('display_access/',views.display_access,name='display_access'),
 ]
